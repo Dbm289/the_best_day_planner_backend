@@ -19,7 +19,7 @@ class ListsController < ApplicationController
     end
 
     def update
-        @list = list.find(params[:id])
+        @list = List.find(params[:id])
         @list.update(list_params)
         if @list
             render json: @list
