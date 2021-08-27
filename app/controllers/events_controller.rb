@@ -1,20 +1,31 @@
 class EventsController < ApplicationController
     def index
-        events = Event.all
-        render json: events
+        @events = Event.all
+        render json: events, status: 200
     end
 
     def show
-        event = Event.find(params[:id])
-        render json: event
+        @event = Event.find(params[:id])
+        render json: event, status: 200
     end
 
     def create
-        event = Event.create(event_params)
-        if event
-            render json: event
+        @event = Event.create(event_params)
+        if @event
+            render json: @event
         else
             render json: {error: 'This event could not be created.'}
+        end
+    end
+
+    def update
+        @event = Event.find(params[:id])
+        @event.update(event_params)
+        if @event
+            render json: @event
+        else
+            render json: {error: 'This event could not be edited.'}
+        end
     end
 
     def destroy
@@ -22,8 +33,6 @@ class EventsController < ApplicationController
         event.destroy
         render json: {message: 'Event successfully deleted.'}
     end
-
-end
 
     private
 

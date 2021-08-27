@@ -16,6 +16,7 @@ class ListsController < ApplicationController
             render json: @list
         else
             render json: {error: 'This list could not be created.'}
+        end
     end
 
     def update
@@ -33,8 +34,6 @@ class ListsController < ApplicationController
         @list.destroy
         render json: {message: 'Event successfully deleted.'}
     end
-
-end
 
 
     private
