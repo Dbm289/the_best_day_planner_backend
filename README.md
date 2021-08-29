@@ -1,24 +1,14 @@
-# README
+backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Please refer to the following repo for this project's frontend data: https://github.com/Dbm289/the_best_day_planner_frontend
 
-Things you may want to cover:
+The Best Day Planner creats lists that have many events within them. These events have names, further details, start times, and end times and can help users make to-do lists. 
 
-* Ruby version
+Installation help: To install, fork this repo and that of the frontend page. On the rails backend, run bundle install then run rails db:migrate and rails db:seed. Run rails s to boot up your local rails server and use the web browser of your choice to run index.html
 
-* System dependencies
+Installation of postgres is important to run this application!
 
-* Configuration
+YouTube link for project deomnstration:
 
-* Database creation
+Medium post regarding project:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
